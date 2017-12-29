@@ -64,7 +64,7 @@ holiday_hash.each do |season, holiday|
     cap = holiday_s
     if holiday_s.include? "_"
       holiday_s = holiday_s.split("_")
-      cap = cap.each do |word| 
+      cap = holiday_s.each do |word| 
         word.capitalize
       end 
       cap = cap.join(" ")
