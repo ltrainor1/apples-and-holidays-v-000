@@ -62,10 +62,11 @@ holiday_hash.each do |season, holiday|
     supplies = supply.join(", ")
     holiday_s = holiday.to_s.capitalize
     if holiday_s.include? "_"
-      holiday_s = holiday_s.split("_").each {|word| word.capitalize}
-      
+      holiday_s = holiday_s.split("_")
+      cap = holiday_s.each {|word| word.capitalize}
+      cap.join(" ")
     end 
-    puts "  #{holiday_s}: #{supplies}"
+    puts "  #{cap}: #{supplies}"
   end 
 end 
 end
